@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/rraj123/authz-filter-proto";
+package authzfilter;
+
+service AuthZProcessor {
+  rpc processReq(FilterRequest) returns (FilterResponse) {}
+}
+
+message FilterRequest {
+    string req = 1;
+}
+message FilterResponse {
+    // Dummy for now ..
+    string message = 1;
+} 
